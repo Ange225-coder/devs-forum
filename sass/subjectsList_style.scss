@@ -1,0 +1,184 @@
+@import "userHeaderStyle/header";
+@import "arrow/arrow_style";
+
+body {
+    background-color: #f8f9fa;
+    font-family: "BlinkMacSystemFont", sans-serif;
+}
+
+
+.card_section {
+    margin-top: 4%;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:first-child {
+        border: 1px solid #47b2e4;
+        padding: 3% 8% 3% 8%;
+        border-radius: 20px;
+        color: #47b2e4;
+        font-family: "BlinkMacSystemFont", sans-serif;
+
+        @include all-screens {
+            font-size: .8em;
+        }
+
+        &:hover {
+            background-color: #47b2e4;
+            color: #fff;
+        }
+    }
+
+    a:last-child {
+        background-color: #47b2e4;
+        color: #fff;
+        font-family: "BlinkMacSystemFont", sans-serif;
+        padding: 3% 8% 3% 8%;
+        border-radius: 20px;
+
+        @include all-screens {
+            font-size: .8em;
+        }
+
+        &:hover {
+            background-color: #2793cc;
+        }
+    }
+
+    article {
+        display: flex;
+        margin-right: 3.2%;
+
+        @include all-screens {
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            margin-top: -4%;
+            margin-bottom: -4.8%;
+            border-radius: 5px 5px 0 0;
+
+            @include all-screens {
+                margin-top: -5%;
+            }
+        }
+
+        .card {
+            background-color: #fff;
+            margin-left: 4%;
+            border-radius: 5px;
+            box-shadow: 0 6px 23px rgba(117, 117, 117, 0.67);
+
+            @include all-screens {
+                margin-bottom: 7%;
+            }
+
+            &__text {
+                width: 90%;
+                margin: auto;
+                font-family: "Georgia", sans-serif;
+                padding-bottom: 10%;
+
+                h1 {
+                    text-align: center;
+                    font-weight: normal;
+                    color: red;
+                    margin-top: 8%;
+                }
+            }
+
+            div:first-child {
+                width: 100%;
+                margin: auto;
+            }
+
+            &__text--flex {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 8%;
+            }
+
+            &__creation {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &--size {
+                font-size: .9em;
+                font-style: oblique;
+                text-decoration: underline;
+                color: grey;
+
+                @include all-screens {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        strong {
+            color: #37517e;
+            font-size: .9em;
+        }
+    }
+}
+
+
+.pagination {
+    //border: 1px solid red;
+    width: 35%;
+    margin: 6% auto;
+
+
+    a {
+        text-decoration: none;
+        border: 1px solid grey;
+        padding: 15px 18px 15px 18px;
+        border-radius: 50%;
+        color: #47b2e4;
+
+        @include all-screens {
+            border: none;
+            padding: 11px 14px 11px 14px;
+        }
+
+        &:hover {
+            background-color: #47b2e4;
+            color: #f8f9fa;
+            border: none;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+footer {
+    background-color: #37517e;
+    margin: 7% -.5% -5% -2%;
+
+    @include all-screens {
+        margin-right: -1.7%;
+        margin-top: 14%;
+        padding-top: 1.2%;
+        padding-bottom: 1.2%;
+        height: 50px;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 1em;
+    }
+}

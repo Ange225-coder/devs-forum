@@ -1,0 +1,150 @@
+//breakpoints for laptop responsive
+$laptop_breakpoints: (
+        screen_max-width: 1024px,
+);
+
+@mixin all-screens {
+  @media all and (max-width: map-get($laptop_breakpoints, screen_max-width)) {
+    @content;
+  }
+}
+
+
+
+body {
+    width: 100%;
+    margin: auto auto auto auto;
+    height: 100vh;
+    padding-bottom: -1%;
+    font-family: sans-serif;
+}
+
+.block-page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -2%;
+    padding-bottom: -4%;
+
+    @include all-screens {
+        flex-direction: column-reverse;
+    }
+
+
+
+    &__img {
+        width: 50%;
+        height: 100%;
+        margin-right: -1%;
+
+        @include all-screens {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__form {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include all-screens {
+            width: 100%;
+            padding-bottom: 10%;
+        }
+    }
+
+    form {
+        width: 100%;
+        height: 70%;
+        margin: auto;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 6%;
+        }
+
+        .input-block {
+            width: 95%;
+            margin: auto;
+        }
+
+        .--margeBot {
+            margin-bottom: 5.5%;
+        }
+
+        .--margeTop {
+            margin-top: 5.5%;
+        }
+
+        input {
+            height: 50px;
+            width: 98.5%;
+            outline: none;
+            border: none;
+            font-size: 1.1em;
+        }
+
+        .inputs--border {
+            border: 1px solid rgba(208, 208, 208, 0.48);
+            border-radius: 7px;
+            width: 60%;
+            margin: auto;
+            box-sizing: border-box;
+            padding-top: 2%;
+            padding-bottom: 2%;
+
+            @include all-screens {
+                width: 80%;
+            }
+
+            hr {
+                border: .1px;
+                height: .1px;
+                margin-bottom: -2%;
+                margin-top: -2%;
+                background-color: rgba(208, 208, 208, 0.48);
+            }
+        }
+
+        span {
+            color: rgba(155, 155, 155, 0.9);
+            font-size: .7em;
+        }
+
+        .form__btn {
+            width: 60%;
+            box-sizing: border-box;
+            margin: 9% auto;
+
+            @include all-screens {
+                width: 80%;
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+                font-size: inherit;
+                background-color: #007bff;
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #2d5dc4;
+                    transition: all .5s ease;
+                }
+            }
+        }
+
+        .error {
+            text-align: center;
+            color: red;
+        }
+    }
+}

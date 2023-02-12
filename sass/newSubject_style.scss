@@ -1,0 +1,115 @@
+@import "userHeaderStyle/header";
+@import "arrow/arrow_style";
+
+
+body {
+    background-color: #f8f9fa;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    margin-bottom: 5%;
+}
+
+
+
+.card__title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-bottom: 3%;
+    margin-top: 4%;
+
+
+    @include all-screens {
+        font-size: 1.2em;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+}
+
+
+.card {
+    width: 450px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px 5px;
+    box-shadow: 0 3px 20px #a2a2a2;
+
+    @include all-screens {
+        width: 90%;
+    }
+
+
+    img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+
+
+    form {
+        margin-top: 5%;
+        padding: 10% 6% 20%;
+
+        input, textarea, button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input, textarea {
+            border: 1px solid rgba(173, 173, 173, 0.64);
+            border-radius: 4px;
+            padding-left: 3.2%;
+            font-size: .9em;
+
+            &::placeholder {
+                color: rgba(128, 128, 128, 0.62);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            font-size: .95em;
+            font-family: "BlinkMacSystemFont", sans-serif;
+            margin-bottom: 4%;
+        }
+
+        input {
+            height: 45px;
+            margin-bottom: 4%;
+        }
+
+        button {
+            border: none;
+            background: linear-gradient(to bottom left, #512664, rgba(111, 55, 148, 0.95), #478e9b);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #f8f9fa;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+footer {
+    background-color: #37517e;
+    margin: 7% -.5% -5% -2%;
+
+    @include all-screens {
+        //margin: 3.2% -1.7% -2.8% -2%;
+        margin-top: 14%;
+        padding-top: 1.2%;
+        padding-bottom: 1.2%;
+        height: 50px;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 1em;
+    }
+}

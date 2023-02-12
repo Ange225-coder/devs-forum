@@ -1,0 +1,333 @@
+//breakpoints for all kind of screens
+$screen_breakpoints: (
+        screen_max-width: 1024px,
+);
+
+//mixin for responsive
+@mixin all-screens {
+    @media all and (max-width: map-get($screen_breakpoints, screen_max-width)) {
+        @content;
+    }
+}
+
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+
+    @include all-screens {
+        width: 98%;
+        margin: auto;
+    }
+}
+
+header {
+    background-color: #37517e;
+    color: #fff;
+    height: 650px;
+    margin-top: -1.2%;
+    margin-left: -.6%;
+    margin-right: -.5%;
+
+    @include all-screens {
+        height: 900px;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 15%;
+            margin-right: 2%;
+            margin-top: 2%;
+            font-size: 1.05em;
+
+            @include all-screens {
+                flex-direction: column;
+                font-size: .8em;
+                margin-right: 9%;
+            }
+        }
+
+        li {
+          list-style: none;
+        }
+
+        li:last-child {
+            background-color: #c50000;
+            padding: 4px 12px 4px 12px;
+            border-radius: 4px;
+            margin-left: 8%;
+
+            @include all-screens {
+                margin-top: 8%;
+            }
+
+            &:hover {
+                background-color: red;
+                box-shadow: 2px 2px 5px red;
+
+                @include all-screens {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .nav-link__color:hover {
+            color: #73c5eb;
+        }
+
+        h1 {
+            margin-top: 2.5%;
+            margin-left: 6%;
+
+            @include all-screens {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .header-info--flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include all-screens {
+            flex-direction: column-reverse;
+        }
+
+        img {
+            width: 110%;
+
+            @include all-screens {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 2.5em;
+
+            @include all-screens {
+                font-size: 2em;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+
+        h2 {
+            color: whitesmoke;
+            opacity: .5;
+            font-size: 1.3em;
+
+            @include all-screens {
+                font-size: 1em;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+
+    .header-info__img {
+        margin-right: 15%;
+
+        @include all-screens {
+            margin-right: 0;
+        }
+    }
+
+    .header--info__text {
+        width: 70%;
+        margin-left: 6.3%;
+
+        @include all-screens {
+            width: 90%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+.services {
+    background-color: rgba(210, 210, 210, 0.23);
+    margin-top: 0;
+    margin-right: -.5%;
+    margin-left: -.5%;
+    padding-top: 3%;
+    padding-bottom: 6%;
+
+    @include all-screens {
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    &--hCenter, &--pCenter {
+        text-align: center;
+    }
+
+
+    h1 {
+        font-weight: normal;
+    }
+
+    .services__img {
+        text-align: center;
+    }
+
+    .services__text {
+
+        h2, p {
+            text-align: center;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        p:first-child {
+            color: red;
+
+            @include all-screens {
+                font-size: .9em;
+            }
+        }
+
+        p:last-child {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: .9em;
+
+            @include all-screens {
+                font-size: .8em;
+            }
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #000000;
+
+            @include all-screens {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 4%;
+
+        @include all-screens {
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            margin-top: -5%;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    .article__card {
+        width: 20%;
+        background-color: white;
+        border-radius: 5px;
+
+        @include all-screens {
+            width: 90%;
+            margin: 7% auto;
+        }
+
+        &:hover {
+            box-shadow: 0 2px 20px rgba(117, 117, 117, 0.67);
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.notice {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(187, 188, 206, 0.42);
+    margin-right: -.5%;
+    margin-left: -.6%;
+    margin-bottom: 0;
+
+    @include all-screens {
+        flex-direction: column-reverse;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    div:first-child {
+        width: 65%;
+        margin-left: 4%;
+
+        @include all-screens {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+            color: #3d3b3b;
+
+            @include all-screens {
+                font-size: .9em;
+                padding-bottom: 4%;
+            }
+        }
+    }
+
+    div:last-child {
+
+        img {
+            width: 80%;
+
+            @include all-screens {
+                width: 100%;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #37517e;
+
+        @include all-screens {
+            font-size: 1.9em;
+        }
+    }
+}
+
+
+footer {
+    background-color: #37517e;
+    margin: -1% -.5% -.9% -.6%;
+
+    @include all-screens {
+        margin: -4% -1% -2.8% -1%;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: .9em;
+    }
+}

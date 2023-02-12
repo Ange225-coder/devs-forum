@@ -1,0 +1,248 @@
+@import "userHeaderStyle/header";
+@import "arrow/arrow_style";
+
+body {
+    font-family: "Arial", serif;
+}
+
+.arrow-bar {
+    margin: -1.2% -.55% 2.1% -.7%;
+    border-bottom: 1px solid rgba(194, 194, 194, 0.5);
+
+    @include all-screens {
+        margin-left: -2%;
+        margin-right: -1.7%;
+    }
+
+    .arrow--margBott {
+        margin-bottom: .2%;
+    }
+
+    a {
+        color: rgba(108, 108, 108, 0.82);
+    }
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-around;
+    margin-left: 6.5%;
+    margin-top: 3%;
+
+    @include all-screens {
+        width: 100%;
+        margin: auto;
+    }
+
+    div:first-child i {
+        font-size: 5em;
+        color: #00b2ff;
+
+        @include all-screens {
+            font-size: 4em;
+        }
+    }
+
+    div:last-child {
+        margin-left: 9%;
+
+        @include all-screens {
+            margin-left: -20%;
+        }
+
+        i {
+            color: rgba(131, 131, 131, 0.92);
+        }
+    }
+
+    h1 {
+        color: #575757;
+
+        @include all-screens {
+            font-size: 1.1em;
+        }
+    }
+
+    span {
+        font-size: .7em;
+        color: rgba(87, 87, 87, 0.72);
+    }
+}
+
+
+.forms {
+    background-color: rgba(217, 217, 217, 0.15);
+    margin-top: 3%;
+    margin-left: -.8%;
+    margin-right: -.55%;
+    padding-bottom: 2%;
+
+    @include all-screens {
+        margin-left: -3%;
+        margin-right: -1.7%;
+    }
+
+    &__email, &__pwd, &__deletion {
+        padding-top: 1.6%;
+        width: 70%;
+        margin: auto;
+
+        @include all-screens {
+            width: 90%;
+            padding-top: 3.5%;
+        }
+
+        form {
+            border: 1px solid rgba(187, 187, 187, 0.73);
+            background-color: #fff;
+            padding-bottom: 3%;
+
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                height: 40px;
+                padding-left: 3%;
+                font-size: .9em;
+                margin-bottom: 4%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            div {
+                padding-left: 30%;
+                padding-right: 30%;
+
+                @include all-screens {
+                    padding-left: 4%;
+                    padding-right: 4%;
+                }
+            }
+
+            button {
+                width: 100%;
+                margin-top: 2%;
+                border: none;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                border-radius: 5px;
+                background-color: #370cf5;
+                color: #fff;
+                font-size: 1em;
+                cursor: pointer;
+
+                @include all-screens {
+                    font-size: .9em;
+                }
+
+                &:hover {
+                    background-color: #3040be;
+                }
+            }
+        }
+
+        h2 {
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 3%;
+            font-size: 1.2em;
+        }
+    }
+
+    &__email input {
+        border: none;
+        border-bottom: 1px solid grey;
+        background-color: rgba(201, 201, 201, 0.27);
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__pwd input {
+        border-radius: 4px;
+        border: 1px solid rgba(218, 218, 218, 0.73);
+    }
+
+    &__error {
+        color: red;
+        text-align: center;
+        margin-bottom: 2.5%;
+        font-size: .9em;
+        font-family: "Georgia", sans-serif;
+    }
+
+    &__deletion {
+        border: 1px solid rgba(187, 187, 187, 0.73);
+        margin-top: 1.6%;
+        background-color: #fff;
+        margin-bottom: 4%;
+
+        @include all-screens {
+            margin-top: 4%;
+            margin-bottom: 7%;
+        }
+
+        div {
+            padding-bottom: 3%;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p:last-child {
+            margin-top: 3%;
+
+            @include all-screens {
+                margin-top: 8%;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-style: oblique;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #cc0000;
+            color: #fff;
+            padding: 12px 11px 12px 11px;
+            border-radius: 4px;
+
+            @include all-screens {
+                font-size: .8em;
+            }
+
+            &:hover {
+                background-color: #af0000;
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: #37517e;
+    margin: -1% -.5% -.9% -.6%;
+
+    @include all-screens {
+        margin: -3.2% -1.7% -2.8% -2%;
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: .9em;
+    }
+}
