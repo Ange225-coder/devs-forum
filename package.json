@@ -1,0 +1,73 @@
+{
+  "name": "forum_project",
+  "version": "1.0.0",
+  "description": "Forum de discussion pour développeurs",
+  "main": "index.js",
+  "scripts": {
+      "index_style": "sass --watch forum/sass/indexStyle.scss:forum/public/css/indexStyle.css --style compressed",
+      "index_style-prefix": "postcss forum/public/css/indexStyle.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "u_registration_style": "sass --watch forum/sass/uRegistration_style.scss:forum/public/css/uRegistration_style.css --style compressed",
+      "u_registration_style-prefix": "postcss forum/public/css/uRegistration_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "u_login_style": "sass --watch forum/sass/uLoginStyle.scss:forum/public/css/uLoginStyle.css --style compressed",
+      "u_login_style-prefix": "postcss forum/public/css/uLoginStyle.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "contact_style": "sass --watch forum/sass/contact_style.scss:forum/public/css/contact_style.css --style compressed",
+      "contact_style-prefix": "postcss forum/public/css/contact_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "memberHomePage_style": "sass --watch forum/sass/memberHomePage.scss:forum/public/css/memberHomePage_style.css --style compressed",
+      "memberHomePage_style-prefix": "postcss forum/public/css/memberHomePage_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "newSubject_style": "sass --watch forum/sass/newSubject_style.scss:forum/public/css/newSubject_style.css --style compressed",
+      "newSubject_style-prefix": "postcss forum/public/css/newSubject_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "subjectsList_style": "sass --watch forum/sass/subjectsList_style.scss:forum/public/css/subjectsList_style.css --style compressed",
+      "subjectsList_style-prefix" : "postcss forum/public/css/subjectsList_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "settings_style": "sass --watch forum/sass/settings_style.scss:forum/public/css/settings_style.css --style compressed",
+      "setting_style-prefix": "postcss forum/public/css/settings_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "delAccount_style": "sass --watch forum/sass/delAccount_style.scss:forum/public/css/delAccount_style.css --style compressed",
+      "delAccount_style-prefix": "postcss forum/public/css/delAccount_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "devConcerns_style" : "sass --watch forum/sass/devConcerns_style.scss:forum/public/css/devConcerns_style.css --style compressed",
+      "devConcerns_style-prefix" : "postcss forum/public/css/devConcerns_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "devConcernsList_style": "sass --watch forum/sass/devConcernsList_style.scss:forum/public/css/devConcernsList_style.css --style compressed",
+      "devConcernsList_style-prefix": "postcss forum/public/css/devConcernsList_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "emailForm_style" : "sass --watch forum/sass/emailForm_style.scss:forum/public/css/emailForm_style.css --style compressed",
+      "emailForm_style-prefix" : "postcss forum/public/css/emailForm_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "newPwdForms_style" : "sass --watch forum/sass/newPwdForms_style.scss:forum/public/css/newPwdForms_style.css --style compressed",
+      "newPwdForms_style-prefix": "postcss forum/public/css/newPwdForms_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "respondToSubject_style" : "sass --watch forum/sass/respondToSubject_style.scss:forum/public/css/respondToSubject_style.css --style compressed",
+      "respondToSubject_style-prefix" : "postcss forum/public/css/respondToSubject_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "displayResponsesToComments_style" : "sass --watch forum/sass/displayResponsesToComments_style.scss:forum/public/css/displayResponsesToComments_style.css --style compressed",
+      "displayResponsesToComments_style-prefix" : "postcss forum/public/css/displayResponsesToComments_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "respondToConcerns_style" : "sass --watch forum/sass/respondToConcerns_style.scss:forum/public/css/respondToConcerns_style.css --style compressed",
+      "respondToConcerns_style-prefix" : "postcss forum/public/css/respondToConcerns_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "displayConcernResponses_style" : "sass --watch forum/sass/displayConcernResponses_style.scss:forum/public/css/displayConcernResponses_style.css --style compressed",
+      "displayConcernResponses_style-prefix" : "postcss forum/public/css/displayConcernResponses_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+
+
+      "adminHomePage_style" : "sass --watch forum/sass/adminHomePage_style.scss:forum/public/css/adminHomePage_style.css --style compressed",
+      "adminHomePage_style-prefix" : "postcss forum/public/css/adminHomePage_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "adminRegistration_style" : "sass --watch forum/sass/adminRegistration_style.scss:forum/public/css/adminRegistration_style.css --style compressed",
+      "adminRegistration_style-prefix" : "postcss forum/public/css/adminRegistration_style.css --use autoprefixer -d forum/public/css-prefixed",
+
+      "adminLogin_style" : "sass --watch forum/sass/adminLogin_style.scss:forum/public/css/adminLogin_style.css --style compressed",
+      "adminLogin_style-prefix" : "postcss forum/public/css/adminLogin_style.css --use autoprefixer -d forum/public/css-prefixed"
+
+  },
+  "author": "Ange Emmananuel",
+  "license": "ISC",
+  "browserslist": ["last 4 versions"]
+}
